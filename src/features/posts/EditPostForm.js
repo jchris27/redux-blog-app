@@ -39,7 +39,7 @@ const EditPostForm = () => {
         setContent(e.target.value)
     }
     const onAuthorChanged = (e) => {
-        setUserId(e.target.value)
+        setUserId(Number(e.target.value))
     }
 
     // check if all forms are true

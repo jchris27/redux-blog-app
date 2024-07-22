@@ -2,8 +2,11 @@ import PostAuthor from "./PostAuthor";
 import TimeAgo from "./TimeAgo";
 import ReactionButton from "./ReactionButton";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectPostById } from "./postSlice";
 
-const PostsExcerpts = ({ post }) => {
+const PostsExcerpts = ({ postId }) => {
+    const post = useSelector(state => selectPostById(state, postId))
     return (
         <article>
             <p>#{post.id}</p>
